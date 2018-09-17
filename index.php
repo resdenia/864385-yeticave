@@ -111,9 +111,14 @@ $is_auth = rand(0, 1);
     <nav class="nav">
         <ul class="nav__list container">
             <!--заполните этот список из массива категорий-->
-            <li class="nav__item">
-                <a href="pages/all-lots.html">Название категории</a>
-            </li>
+			<?php foreach ($array_category as $category) { ?>
+		         
+		        <li class="promo__item promo__item--boards">
+                	<a class="promo__link" href="pages/all-lots.html"><?php echo $category; ?></a>
+				</li>
+   
+				
+			<?php } ?>
         </ul>
     </nav>
     <div class="main-footer__bottom container">
