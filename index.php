@@ -1,5 +1,6 @@
 <?php
 $is_auth = rand(0, 1);
+<<<<<<< HEAD
 
 $user_name = 'Anton'; // укажите здесь ваше имя
 $user_avatar = 'img/user.jpg';
@@ -12,6 +13,21 @@ $array_products = array(
 	array('Куртка для сноуборда DC Mutiny Charocal', 'Одежда', 7500, 'img/lot-5.jpg'),
 	array('Маска Oakley Canopy', 'Разное', 5400, 'img/lot-6.jpg')
 );
+=======
+			
+$user_name = 'Anton'; // укажите здесь ваше имя
+$user_avatar = 'img/user.jpg';
+$array_category= array('Доски и лыжи', 'Крепления', 'Ботинки', 'Одежда', 'Инструменты', 'Разное');
+$array_products = array(
+  array('2014 Rossignol District Snowboard', 'Доски и лыжи', 10999, 'img/lot-1.jpg'),
+  array('DC Ply Mens 2016/2017 Snowboard', 'Доски и лыжи', 159999, 'img/lot-2.jpg'),
+  array('Крепления Union Contact Pro 2015 года размер L/XL', 'Крепления',	8000, 'img/lot-3.jpg'),
+  array('Ботинки для сноуборда DC Mutiny Charocal', 'Ботинки',	10999,	'img/lot-4.jpg'),
+  array('Куртка для сноуборда DC Mutiny Charocal', 'Одежда', 7500, 'img/lot-5.jpg'),
+  array('Маска Oakley Canopy', 'Разное', 5400, 'img/lot-6.jpg')
+);
+
+>>>>>>> 4114d09df72b279228d80fbd7a3551ac75843b9a
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -38,6 +54,7 @@ $array_products = array(
 
         <nav class="user-menu">
 
+<<<<<<< HEAD
         <?php if ($is_auth): ?>
           <div class="user-menu__image">
             <img src="<?php echo $user_avatar;?>" width="40" height="40" alt="Пользователь">
@@ -55,7 +72,26 @@ $array_products = array(
             </li>
           </ul>
         <?php endif; ?>
+=======
+>>>>>>> 4114d09df72b279228d80fbd7a3551ac75843b9a
 
+         <?php if ($is_auth): ?>
+		 	<div class="user-menu__image">
+				<img src="<?php echo $user_avatar;?>" width="40" height="40" alt="Пользователь">
+			</div>
+			<div class="user-menu__logged">
+				<p><?php echo $user_name; ?></p>
+			</div>
+			<?php else: ?>
+			<ul class="user-menu__list">
+              <li class="user-menu__item">
+                <a href="#">Регистрация</a>
+              </li>
+              <li class="user-menu__item">
+                <a href="#">Вход</a>
+              </li>
+            </ul>
+          <?php endif; ?>
         </nav>
     </div>
 </header>
@@ -66,18 +102,27 @@ $array_products = array(
         <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
         <ul class="promo__list">
             <!--заполните этот список из массива категорий-->
+<<<<<<< HEAD
             <?php
 	            foreach ($array_category as $category) { ?>
+=======
+			<?php foreach ($array_category as $category) { ?>
+>>>>>>> 4114d09df72b279228d80fbd7a3551ac75843b9a
 		         
 		        <li class="promo__item promo__item--boards">
                 	<a class="promo__link" href="pages/all-lots.html"><?php echo $category; ?></a>
 				</li>
    
 				
+<<<<<<< HEAD
 			<?php	}
 
 	             ?>
         </ul>
+=======
+			<?php } ?>
+	     </ul>
+>>>>>>> 4114d09df72b279228d80fbd7a3551ac75843b9a
     </section>
     <section class="lots">
         <div class="lots__header">
@@ -114,9 +159,20 @@ $array_products = array(
     <nav class="nav">
         <ul class="nav__list container">
             <!--заполните этот список из массива категорий-->
+<<<<<<< HEAD
             <li class="nav__item">
                 <a href="pages/all-lots.html">Название категории</a>
             </li>
+=======
+			<?php foreach ($array_category as $category) { ?>
+		         
+		        <li class="promo__item promo__item--boards">
+                	<a class="promo__link" href="pages/all-lots.html"><?php echo $category; ?></a>
+				</li>
+   
+				
+			<?php } ?>
+>>>>>>> 4114d09df72b279228d80fbd7a3551ac75843b9a
         </ul>
     </nav>
     <div class="main-footer__bottom container">
