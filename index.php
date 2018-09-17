@@ -12,7 +12,13 @@ $array_products = array(
   array('Куртка для сноуборда DC Mutiny Charocal', 'Одежда', 7500, 'img/lot-5.jpg'),
   array('Маска Oakley Canopy', 'Разное', 5400, 'img/lot-6.jpg')
 );
+function current_price($price_str){
+$price_str =ceil($price_str);	
+$price_str = number_format($price_str, 0, ' ', ' ');
 
+
+	return $price_str;
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -94,7 +100,7 @@ $array_products = array(
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost">цена<b class="rub">р</b><?php echo $array_products[$i][2]; ?></span>
+                            <span class="lot__cost">цена<!-- <b class="rub">р</b> --><?php echo ' ₽ ' . current_price($array_products[$i][2]); ?></span>
                         </div>
                         <div class="lot__timer timer">
 
