@@ -1,5 +1,5 @@
 <?php
-$array_category= array('Доски и лыжи', 'Крепления', 'Ботинки', 'Одежда', 'Инструменты', 'Разное');
+$array_category = ['boards' => 'Доски и лыжи', 'attachment' => 'Крепления', 'boots' => 'Ботинки', 'clothing' => 'Одежда', 'tools' => 'Инструменты', 'other' => 'Разное'];
 $array_products = array(
   array('2014 Rossignol District Snowboard', 'Доски и лыжи', 10999, 'img/lot-1.jpg'),
   array('DC Ply Mens 2016/2017 Snowboard', 'Доски и лыжи', 159999, 'img/lot-2.jpg'),

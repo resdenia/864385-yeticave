@@ -4,9 +4,9 @@
     <nav class="nav">
         <ul class="nav__list container">
             <!--заполните этот список из массива категорий-->
-			<?php foreach ($array_category as $category) { ?>
+			<?php foreach ($array_category as $key => $category) { ?>
 		         
-		        <li class="promo__item promo__item--boards">
+				<li class="nav__item">
                 	<a class="promo__link" href="pages/all-lots.html"><?php echo htmlspecialchars($category); ?></a>
 				</li>
    
