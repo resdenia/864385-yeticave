@@ -5,6 +5,11 @@
 				
 		return $price_str;
 	}
+	
+	$time2 = strtotime('1 day 00:00:01');
+	$t=time();
+	$time_to = $time2 - $t;
+
 	?>
 <main class="container">
     <section class="promo">
@@ -42,7 +47,7 @@
                             <span class="lot__cost"><!-- <b class="rub">р</b> --><?php echo  current_price($array_products[$i][2]); ?> <b class="rub">р</b></span> 
                         </div>
                         <div class="lot__timer timer">
-
+								<?php 	echo gmdate("H:i:s", $time_to); ?>
                         </div>
                     </div>
                 </div>
